@@ -1,0 +1,115 @@
+# Strings
+
+These methods are available on both regular and Unicode strings.
+
+^ .capitalize()
+
+	! For regular strings, this method depends on the currently 
+	  configured locale to decide what is 'lowercase' and what is
+	  'uppercase'.
+
+	Returns a copy of the string with the first character
+	capitalized, and the rest of the characters lowercased.
+	
+^ .center(`width`[, `fillchar`])
+
+	Returns a copy of the string, centered by padding it with the
+	fill character on both sides until the given width is reached.
+	
+	width::
+		The desired width of the final string.
+		
+	fillchar::
+		**Optional.** The character to use as a fill character.
+		This is a space character by default.
+		
+^ .count(`sub`[, `start`[, `end`]])
+
+	Returns the number of non-overlapping occurrences of the given
+	substring in the given range.
+	
+	sub::
+		The substring to search for.
+		
+	start::
+		**Optional.** The starting point for the search. 
+		Interpreted as in slice notation. Defaults to the start
+		of the string.
+		
+	end::
+		**Optional.** The end point for the search. Interpreted
+		as in slice notation. Defaults to the end of the string.
+
+^ .decode([`encoding`[, `errors`]])
+
+	Returns a `unicode` string containing a copy of the original
+	string, decoded using the codec registered for the specified 
+	encoding.
+	
+	__Since Python 2.7:__ You can also specify the arguments to this
+	method as keyword arguments, for clarity.
+	
+	encoding::
+		**Optional.** The encoding that the string is currently
+		in. If not specified, the value from 
+		{>sys}(`sys.getdefaultencoding`) is used.
+		
+	errors::
+		**Optional.** The error handling scheme to use. Can be
+		any of the following values, or any other name that is
+		registered through {>codecs}(`codecs.register_error`).
+		
+		strict::
+			This is the default. Encoding errors raise a
+			`UnicodeError` exception, or a subclass thereof.
+			
+		ignore::
+			When an error is encountered, ignore the
+			character, and move on to the next one.
+			
+		replace::
+			When an error is encountered, replace the
+			problematic character with U+FFFD, for the
+			built-in Unicode codecs.
+
+^ .encode([`encoding`[, `errors`]])
+
+	Returns a regular string containing a copy of the original
+	string, encoded using the codec registered for the specified 
+	encoding.
+	
+	__Since Python 2.7:__ You can also specify the arguments to this
+	method as keyword arguments, for clarity.
+	
+	encoding::
+		**Optional.** The encoding you wish to encode the string
+		to. If not specified, the value from 
+		{>sys}(`sys.getdefaultencoding`) is used.
+		
+	errors::
+		**Optional.** The error handling scheme to use. Can be
+		any of the following values, or any other name that is
+		registered through {>codecs}(`codecs.register_error`).
+		
+		strict::
+			This is the default. Encoding errors raise a
+			`UnicodeError` exception, or a subclass thereof.
+			
+		ignore::
+			When an error is encountered, ignore the
+			character, and move on to the next one.
+			
+		replace::
+			When an error is encountered, replace the
+			problematic character with U+FFFD, for the
+			built-in Unicode codecs.
+			
+		xmlcharrefreplace::
+			When an error is encountered, replace the
+			problematic character with the corresponding
+			XML entity.
+			
+		backslashreplace::
+			When an error is encountered, replace the
+			problematic character with the corresponding
+			backslashed escape sequence.

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #F5F5F5;
+				font-family: sans-serif;
+				margin-right: 40px;
+			}
+
+			h2, h3, h4, h5, h6, h7
+			{
+				margin-top: 16px;
+				margin-bottom: 4px;
+			}
+
+			.children { padding-left: 40px; }
+
+			.definition
+			{
+				font-weight: bold;
+				margin-bottom: 32px;
+			}
+
+			.example 
+			{ 
+				padding: 5px 6px;
+				font-weight: bold;
+				font-size: 15px;
+				background-color: #E6E6E6; 
+				margin-top: 11px;
+			}
+
+			.example > .children
+			{
+				padding-top: 11px;
+				padding-left: 10px;
+			}
+
+			.example > .children > h7
+			{
+				font-size: 13px;
+			}
+
+			h7
+			{
+				font-size: 14px;
+				font-weight: bold;
+				margin-bottom: 2px;
+			}
+
+			pre
+			{
+				margin-top: 0px;
+				padding: 6px 7px;
+				background-color: #D9D9D9;
+				font-weight: normal;
+				font-size: 13px;
+			}
+
+			dl
+			{
+				margin: 5px 0px;
+			}
+
+			dt
+			{
+				font-weight: bold;
+			}
+
+			dd
+			{
+				font-size: 14px;
+				font-weight: normal;
+				margin-left: 8px;
+			}
+			
+			dd > .children
+			{
+				font-size: 95%;
+			}
+			
+			dd > .children > dl > dd
+			{
+				margin-left: 13px;
+			}
+
+			.exclamation
+			{
+				padding: 7px 8px;
+				margin: 11px 0px;
+				background-color: #FFE9AA;
+				border: 1px solid yellow;
+				font-size: 15px;
+				font-weight: normal;
+			}
+
+			.text
+			{
+				font-size: 15px;
+				font-weight: normal;
+				margin-bottom: 14px;
+				margin-top: 10px;
+			}
+
+			.toc
+			{
+				border: 1px solid gray;
+				background-color: #E6E6E6;
+				padding: 8px 9px;
+				font-size: 15px;
+				margin-bottom: 12px;
+			}
+
+			.toc h2
+			{
+				margin: 0px 0px 3px 0px;
+				font-size: 19px;
+			}
+
+			.toc ul
+			{
+				margin-top: 0px;
+				margin-bottom: 0px;
+				padding-left: 25px;
+			}
+
+			.toc li
+			{
+				margin-bottom: 2px;
+			}
+
+			.toc .alternatives
+			{
+				font-size: 12px;
+			}
+
+			.toc a
+			{
+				color: #292722;
+			}
+
+			.toc a:hover
+			{
+				color: black;
+			}
+			
+			.fixed
+			{
+				font-family: monospace;
+				background-color: white;
+				padding: 1px 4px;
+				border: 1px solid silver;
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="children"><h1>Strings</h1><div class="text">These methods are available on both regular and Unicode strings.</div><div class="definition"><a name="_capitalize">.capitalize() <div class="children"><div class="exclamation"><strong>Important:</strong> For regular strings, this method depends on the currently    configured locale to decide what is 'lowercase' and what is   'uppercase'. <div class="children"></div></div><div class="text">Returns a copy of the string with the first character capitalized, and the rest of the characters lowercased.</div></div></a></div><div class="definition"><a name="_centerwidthfillchar">.center(<span class="fixed">width</span>[, <span class="fixed">fillchar</span>]) <div class="children"><div class="text">Returns a copy of the string, centered by padding it with the fill character on both sides until the given width is reached.</div><dl><dt>width</dt><dd>The desired width of the final string.<div class="children"></div></dd></dl><dl><dt>fillchar</dt><dd><em>Optional.</em> The character to use as a fill character. This is a space character by default.<div class="children"></div></dd></dl></div></a></div><div class="definition"><a name="_countsubstartend">.count(<span class="fixed">sub</span>[, <span class="fixed">start</span>[, <span class="fixed">end</span>]]) <div class="children"><div class="text">Returns the number of non-overlapping occurrences of the given substring in the given range.</div><dl><dt>sub</dt><dd>The substring to search for.<div class="children"></div></dd></dl><dl><dt>start</dt><dd><em>Optional.</em> The starting point for the search.  Interpreted as in slice notation. Defaults to the start of the string.<div class="children"></div></dd></dl><dl><dt>end</dt><dd><em>Optional.</em> The end point for the search. Interpreted as in slice notation. Defaults to the end of the string.<div class="children"></div></dd></dl></div></a></div><div class="definition"><a name="_decodeencodingerrors">.decode([<span class="fixed">encoding</span>[, <span class="fixed">errors</span>]]) <div class="children"><div class="text">Returns a <span class="fixed">unicode</span> string containing a copy of the original string, decoded using the codec registered for the specified  encoding.</div><div class="text"><strong>Since Python 2.7:</strong> You can also specify the arguments to this method as keyword arguments, for clarity.</div><dl><dt>encoding</dt><dd><em>Optional.</em> The encoding that the string is currently in. If not specified, the value from  <a href="sys.html"><span class="fixed">sys.getdefaultencoding</span></a> is used.<div class="children"></div></dd></dl><dl><dt>errors</dt><dd><em>Optional.</em> The error handling scheme to use. Can be any of the following values, or any other name that is registered through <a href="codecs.html"><span class="fixed">codecs.register_error</span></a>.<div class="children"><dl><dt>strict</dt><dd>This is the default. Encoding errors raise a <span class="fixed">UnicodeError</span> exception, or a subclass thereof.<div class="children"></div></dd></dl><dl><dt>ignore</dt><dd>When an error is encountered, ignore the character, and move on to the next one.<div class="children"></div></dd></dl><dl><dt>replace</dt><dd>When an error is encountered, replace the problematic character with U+FFFD, for the built-in Unicode codecs.<div class="children"></div></dd></dl></div></dd></dl></div></a></div><div class="definition"><a name="_encodeencodingerrors">.encode([<span class="fixed">encoding</span>[, <span class="fixed">errors</span>]]) <div class="children"><div class="text">Returns a regular string containing a copy of the original string, encoded using the codec registered for the specified  encoding.</div><div class="text"><strong>Since Python 2.7:</strong> You can also specify the arguments to this method as keyword arguments, for clarity.</div><dl><dt>encoding</dt><dd><em>Optional.</em> The encoding you wish to encode the string to. If not specified, the value from  <a href="sys.html"><span class="fixed">sys.getdefaultencoding</span></a> is used.<div class="children"></div></dd></dl><dl><dt>errors</dt><dd><em>Optional.</em> The error handling scheme to use. Can be any of the following values, or any other name that is registered through <a href="codecs.html"><span class="fixed">codecs.register_error</span></a>.<div class="children"><dl><dt>strict</dt><dd>This is the default. Encoding errors raise a <span class="fixed">UnicodeError</span> exception, or a subclass thereof.<div class="children"></div></dd></dl><dl><dt>ignore</dt><dd>When an error is encountered, ignore the character, and move on to the next one.<div class="children"></div></dd></dl><dl><dt>replace</dt><dd>When an error is encountered, replace the problematic character with U+FFFD, for the built-in Unicode codecs.<div class="children"></div></dd></dl><dl><dt>xmlcharrefreplace</dt><dd>When an error is encountered, replace the problematic character with the corresponding XML entity.<div class="children"></div></dd></dl><dl><dt>backslashreplace</dt><dd>When an error is encountered, replace the problematic character with the corresponding backslashed escape sequence.<div class="children"></div></dd></dl></div></dd></dl></div></a></div></div>
+	</body>
+</html>
