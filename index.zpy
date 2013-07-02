@@ -1,0 +1,16 @@
+# Python (2.7) documentation
+
+Hi. This is an effort to rewrite the Python documentation to be more
+useful, less ambiguous, more readable, and generally more usable as a
+quick reference during programming.
+
+Note that this is nowhere near done, quite a lot of things still lack
+examples - the eventual goal is to have at least one example for every
+single method - and that it will probably take a while to finish it
+entirely.
+
+The documentation here is written using 
+{http://cryto.net/zippydoc/}(ZippyDoc), and is maintained in a
+{http://github.com/joepie91/python-docs}(Git repository). Contributions
+are welcome - I'm not well-versed enough at Python to do all of this on
+my own :)
