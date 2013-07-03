@@ -113,3 +113,39 @@ These methods are available on both regular and Unicode strings.
 			When an error is encountered, replace the
 			problematic character with the corresponding
 			backslashed escape sequence.
+
+^ .endswith(`suffix`[, `start`[, `end`]])
+
+	Returns a boolean, indicating whether the string ends with the
+	given suffix or not.
+	
+	suffix::
+		The suffix to check for. You can either specify a single
+		string, or a tuple of strings to look for.
+		
+	start::
+		**Optional.** The starting point for the search. 
+		Interpreted as in slice notation. Defaults to the start
+		of the string.
+		
+	end::
+		**Optional.** The end point for the search. Interpreted
+		as in slice notation. Defaults to the end of the string.
+		
+^ .expandtabs([`tabsize`])
+
+	Returns a copy of the string, with all tab characters replaced
+	by one or more spaces, depending on the specified tabsize.
+	
+	The string is divided up into columns, each of which is as wide
+	as the given tabsize. After every part of the string that is not
+	a tab character, the current column is filled up with one or
+	more spaces, until the next column 'border' is reached.
+	
+	! Every character that is not a tab, newline or return, will be
+	  treated as being one position wide, even if they are not
+	  displayed when printing the entire string.
+
+	tabsize::
+		**Optional.** The amount of spaces that a tab character
+		should be replaced with, at most. Defaults to 8.
