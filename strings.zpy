@@ -140,7 +140,9 @@ These methods are available on both regular and Unicode strings.
 	The string is divided up into columns, each of which is as wide
 	as the given tabsize. After every part of the string that is not
 	a tab character, the current column is filled up with one or
-	more spaces, until the next column 'border' is reached.
+	more spaces, until the next column 'border' is reached. If there
+	are multiple tab characters in a row, the remaining tab
+	characters will fill up an entire column.
 	
 	! Every character that is not a tab, newline or return, will be
 	  treated as being one position wide, even if they are not
